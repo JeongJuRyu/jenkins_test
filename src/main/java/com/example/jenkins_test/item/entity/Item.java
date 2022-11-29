@@ -2,6 +2,7 @@ package com.example.jenkins_test.item.entity;
 
 import java.util.UUID;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -19,4 +20,7 @@ import lombok.NoArgsConstructor;
 public class Item {
 	@Id @GeneratedValue
 	private UUID id;
+
+	@Column(nullable = false)
+	private String name;
 }
